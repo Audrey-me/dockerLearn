@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
@@ -7,6 +8,12 @@ const MongoClient = require('mongodb').MongoClient;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+
 
 // Define the MongoDB connection URL and options
 const mongoUrl = "mongodb://admin:secret@172.19.0.2:27017";
