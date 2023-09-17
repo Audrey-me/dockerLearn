@@ -1,9 +1,6 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-# the environment variables
-ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=password
 
 # this will be running in my container environment on on my local or host
 RUN mkdir -p /home/app
