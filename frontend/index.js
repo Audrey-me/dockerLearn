@@ -42,7 +42,8 @@ function formValidate(event) {
 }
 async function handleSubmit(userInfo) {
     try {
-        const response = await fetch('35.170.51.172:3000', {
+        // get your backend url eg "http://35.170.51.172:3000/profile"
+        const response = await fetch('http://35.170.51.172:3000/profile', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
