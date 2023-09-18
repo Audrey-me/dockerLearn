@@ -16,7 +16,8 @@ app.get('/', function (req, res) {
 
 
 // Define the MongoDB connection URL and options
-const mongoUrl = "mongodb://admin:secret@172.19.0.2:27017";
+
+const mongoUrl = process.env.MONGODB_URL
 const mongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
 // Define the database name
