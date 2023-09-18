@@ -31,11 +31,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8080:80"
     container_name: frontend
-    networks:
-      - mongo-network
-
+    
   backend:
     build:
       context: ./backend  # Change the context to the root directory
@@ -44,7 +42,7 @@ services:
       - "3000:3000"
     container_name: backend
     environment:
-      - MONGODB_URL: mongodb://mongodb:27017
+      - MONGODB_URL=mongodb://mongodb:27017
     networks:
       - mongo-network
     

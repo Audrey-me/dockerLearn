@@ -42,7 +42,7 @@ function formValidate(event) {
 }
 async function handleSubmit(userInfo) {
     try {
-        const response = await fetch('<backend_url_after_running_the_backend>', {
+        const response = await fetch('35.170.51.172:3000', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
