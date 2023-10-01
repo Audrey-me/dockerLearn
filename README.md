@@ -41,6 +41,12 @@ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 ```
+OR 
+```bash
+sudo dnf install docker
+sudo systemctl start docker
+sudo usermod -a -G docker ec2-user
+```
 
 ### install Git
 ```bash
