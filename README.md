@@ -1,6 +1,6 @@
 # DockerLearn Application Setup Guide
 
-This guide will walk you through setting up the **DockerLearn** application on an Amazon EC2 instance. 
+This guide will walk you through deploying the **DockerLearn** application on an Amazon EC2 instance. 
 **DockerLearn** is a sample application that demonstrates how to use Docker and Docker Compose to run a multi-container application. The application consists of a frontend, backend, MongoDB, and a web-based MongoDB client (mongo-express).
 
 ## Prerequisites
