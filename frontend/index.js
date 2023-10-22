@@ -43,9 +43,9 @@ function formValidate(event) {
 async function handleSubmit(userInfo) {
     try {
         // get your backend url eg "http://35.170.51.172:3000/profile" 
-        // 35.170.51.172 refers to the public ip address of either EC2 or ECS
+        // 35.170.51.172 refers to the public ip address of either EC2 or ECS task
        
-        const response = await fetch('http://localhost:3000/profile', {
+        const response = await fetch('/api', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

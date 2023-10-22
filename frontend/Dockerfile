@@ -1,6 +1,8 @@
 # Use an official Nginx base image
 FROM nginx:alpine
 
+# override nginx default configuration inside the directory stated with what we have in default.conf
+COPY default.conf /etc/nginx/conf.d/
 
 # Copy your frontend application files into the Nginx document root
 COPY ./ /usr/share/nginx/html
