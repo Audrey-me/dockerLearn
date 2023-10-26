@@ -1,12 +1,8 @@
 # Use an official Nginx base image
 FROM nginx:alpine
 
-
-# this deletes the default configuration of nginx (the generic ui of welcome to nginx)
-RUN rm etc/nginx/nginx.conf
-
-# we now put our own configuration(it will render our html)
-COPY default.conf /etc/nginx/conf.d/
+# replace nginx default configuration with our custom one by copying into it
+COPY ./nginx/default.conf /etc/nginx/nginx.conf
 
 # Copy your frontend application files into the Nginx document root
 COPY ./ /usr/share/nginx/html
