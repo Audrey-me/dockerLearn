@@ -42,8 +42,7 @@ function formValidate(event) {
 }
 async function handleSubmit(userInfo) {
     try {
-        // get your backend url eg "http://35.170.51.172:3000/profile" 
-        // 35.170.51.172 refers to the public ip address of either EC2 or ECS task
+        //the path /api refers to the reverse proxy we did which will route all our request from the path to the backend server
        
         const response = await fetch('/api', {
             method: 'POST',

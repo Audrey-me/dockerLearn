@@ -9,9 +9,9 @@ const MongoClient = require('mongodb').MongoClient;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, "/frontend/index.html"));
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, "/frontend/index.html"));
+// });
 
 
 
