@@ -5,7 +5,7 @@ FROM nginx:alpine
 COPY default.conf /etc/nginx/nginx.conf
 
 # Copy your frontend application files into the Nginx document root
-COPY ./ /usr/share/nginx/html
+COPY ./ /usr/share/nginx/index.html
 
 # Expose port 80 for the Nginx web server
 EXPOSE 80
