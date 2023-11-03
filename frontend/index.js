@@ -44,7 +44,7 @@ async function handleSubmit(userInfo) {
     try {
         //the path /api refers to the reverse proxy we did which will route all our request from the path to the backend server
        
-        const response = await fetch('http://localhost:3000/api', {
+        const response = await fetch('/api', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
